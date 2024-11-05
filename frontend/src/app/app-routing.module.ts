@@ -7,6 +7,7 @@ import { PostsPageComponent } from './pages/posts/posts-page/posts-page.componen
 import { ChatPageComponent } from './pages/chat/chat-page/chat-page.component';
 import { HelpPageComponent } from './pages/help/help-page/help-page.component';
 import { HomePageComponent } from './pages/home/home-page/home-page.component';
+import { RegisterPageComponent } from './pages/register/register-page/register-page.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'posts', component:PostsPageComponent},
   { path: 'chat', component:ChatPageComponent},
   { path: 'help', component:HelpPageComponent},
+  {path: 'register', component:RegisterPageComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },  // Ruta por defecto
   { path: '**', redirectTo: 'home' }  // Ruta de fallback en caso de error
 ];

@@ -1,91 +1,212 @@
-/* Estilos generales */
-body {
-  font-family: 'Arial', sans-serif;
+/* Estilos globales */
+/* Barra de navegacion */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.nav-container {
   background-color: #f5f5f5;
-}
-
-/* Barra de navegación */
-header {
-  background-color: #f0f0f0;
   padding: 10px 20px;
-}
-
-nav ul {
-  list-style-type: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin: 0;
-  padding: 0;
+  justify-content: space-between;
 }
 
-nav ul li {
-  margin-right: 20px;
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
 }
 
-nav ul li input[type="text"] {
-  padding: 5px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+.logo {
+  width: 35px;
+  height: 35px;
+  min-width: 35px;
+  background-color: #537052;
+  border-radius: 50%;
 }
 
-nav ul li a {
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
   text-decoration: none;
   color: #333;
-  font-size: 18px;
-}
-
-/* Título de la página */
-main h1 {
+  font-size: 14px;
+  padding: 8px 15px;
+  width: 80px;
   text-align: center;
-  margin-top: 30px;
-  font-size: 36px;
-  color: #4b7345;
+  font-family: "ADLaM Display", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-/* Lista de productos */
-.product-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 20px;
+.nav-center {
+  flex: 2;
+  max-width: 200px;
+  position: relative;
 }
 
-.product {
-  background-color: #fff;
-  padding: 20px;
-  text-align: center;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.nav-center img {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  z-index: 1;
 }
 
-.product img {
+.search-bar {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
+  padding: 8px 15px 8px 45px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background-color: white;
+  height: 35px;
 }
 
-.product h3 {
-  margin: 10px 0;
-  color: #4b7345;
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+  justify-content: flex-end;
 }
 
-.product p {
-  color: #777;
+.notification-icon {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  min-width: 35px;
+  background-color: #dadada;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notification-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.user-button {
+  text-decoration: none;
+  background-color: #537052;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  height: 35px;
+  min-width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.user-icon {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+/* Cuerpo */
+
+.main-content {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.store-section {
+  margin-bottom: 40px;
+  padding: 0 20px;
+}
+
+.store-title {
+  padding-top: 20px;
+  color: #537052;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "ADLaM Display", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.store-title svg{
+  width: 50px;
+  height: 50px;
+  color: #537052;
+}
+
+.store-title img {
+  width: 24px;
+  height: 24px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-content {
+  padding: 20px;
+}
+
+.product-title {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.product-description {
+  color: #666;
+  font-size: 0.9rem;
   margin-bottom: 15px;
 }
 
-button {
-  background-color: #4b7345;
+.product-button {
+  background-color: #537052;
   color: white;
-  padding: 10px 15px;
+  padding: 8px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 0.9rem;
 }
 
-button:hover {
-  background-color: #3f613b;
+.product-button:hover {
+  background-color: #456044;
 }
+
