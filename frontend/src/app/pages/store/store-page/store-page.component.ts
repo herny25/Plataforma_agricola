@@ -6,12 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./store-page.component.css']
 })
 export class StorePageComponent {
-  products = [
-    { name: 'NomProdct', description: 'Lorem ipsum dolor sit amet consectetur. Egestas semper amet donec vestibulum amet.' },
-    { name: 'NomProdct', description: 'Lorem ipsum dolor sit amet consectetur. Egestas semper amet donec vestibulum amet.' },
-    { name: 'NomProdct', description: 'Lorem ipsum dolor sit amet consectetur. Egestas semper amet donec vestibulum amet.' },
-    { name: 'NomProdct', description: 'Lorem ipsum dolor sit amet consectetur. Egestas semper amet donec vestibulum amet.' },
-    { name: 'NomProdct', description: 'Lorem ipsum dolor sit amet consectetur. Egestas semper amet donec vestibulum amet.' },
-    { name: 'NomProdct', description: 'Lorem ipsum dolor sit amet consectetur. Egestas semper amet donec vestibulum amet.' },
-  ];
+
 }

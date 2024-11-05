@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProfilePageComponent } from './pages/profile/profile-page/profile-page.component';
 import { StorePageComponent } from './pages/store/store-page/store-page.component';
@@ -19,6 +19,7 @@ const routes: Routes = [
   { path: 'chat', component:ChatPageComponent},
   { path: 'help', component:HelpPageComponent},
   {path: 'register', component:RegisterPageComponent},
+  { path: 'posts', component:PostsPageComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },  // Ruta por defecto
   { path: '**', redirectTo: 'home' }  // Ruta de fallback en caso de error
 ];

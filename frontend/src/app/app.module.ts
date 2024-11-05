@@ -6,7 +6,9 @@ import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { StoreModule } from './pages/store/store.module';
-import { HomePageComponent } from './pages/home/home-page/home-page.component';
+import { HelpModule } from './pages/help/help.module';
+import { ProfileModule } from './pages/profile/profile.module';
+import { PostsModule } from './pages/posts/posts.module';
 import { HomeModule } from './pages/home/home.module';
 
 @NgModule({

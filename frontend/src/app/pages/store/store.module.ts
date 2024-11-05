@@ -4,8 +4,6 @@ import { CommonModule } from '@angular/common';
 import { StoreRoutingModule } from './store-routing.module';
 import { StorePageComponent } from './store-page/store-page.component';
 
-
-
 @NgModule({
   declarations: [
     StorePageComponent
