@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=person"
+    />
+    <title>Campo conectado</title>
+  </head>
+  <body>
+    <!-- Barra ade navegacion -->
+    <nav class="nav-container">
+      <div class="nav-left">
+        <div class="logo"></div>
+        <div class="nav-links">
+          <a color="green" routerLink="/">Inicio</a>
+          <a routerLink="/store">Tienda</a>
+          <a routerLink="/help">Ayuda</a>
+        </div>
+      </div>
+      <div class="nav-center">
+        <img
+          src="../assets/iconos/search_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg"
+          alt="busqueda"
+        />
+        <input type="text" class="search-bar" placeholder="Buscar" />
+      </div>
+      <div class="nav-right">
+        <div>
+          <button class="notification-icon">
+            <img
+            src="../assets/iconos/icons8-notification.svg"
+            alt="notification"
+            />
+          </button>
+        </div>
+        <a routerLink="/profile" class="user-button">
+          <span class="material-symbols-outlined"> person </span>Usuario
+        </a>
+      </div>
+    </nav>
+
+    <!-- Cuerpo de la pagina -->
+    <main class="main-container">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="hero-content">
+          <h1 class="hero-title">CAMPO CONECTADO</h1>
+          <p class="hero-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+          <div class="hero-title-img">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xml:space="preserve"
+              id="Leaf"
+              x="0"
+              y="0"
+              version="1.1"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M19.025 3.587c-4.356 2.556-4.044 7.806-7.096 10.175-2.297 1.783-5.538.88-7.412.113 0 0-1.27 1.603-2.181 3.74-.305.717-1.644-.073-1.409-.68C3.905 9.25 14.037 5.416 14.037 5.416s-7.149-.303-11.927 5.94c-.128-1.426-.34-5.284 3.36-7.65 5.016-3.211 14.572-.715 13.555-.119z"
+                fill="#34a853"
+                class="color000000 svgShape"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <img
+          src="../assets/imagenes/cosecha.jpg"
+          alt="Campo trabajadores"
+          class="hero-image"
+        />
+      </section>
+
+      <!-- Tutorial Section -->
+      <section class="tutorial-section">
+        <img
+          src="../assets/imagenes/planta.jpg"
+          alt="tutorial"
+          class="tutorial-image"
+        />
+        <div class="tutorial-content">
+          <h2 class="tutorial-title">Tutorial como usar la página</h2>
+          <p class="tutorial-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+            error totam unde, exercitationem quos a accusamus facere magni
+            consequuntur maxime. Sint, eum repellendus libero natus voluptate
+            itaque commodi velit sed.
+          </p>
+          <button class="video-button">VIDEO</button>
+        </div>
+      </section>
+
+      <!-- Store Section -->
+      <section class="store-section">
+        <h2 class="store-title">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xml:space="preserve"
+            id="Leaf"
+            x="0"
+            y="0"
+            version="1.1"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M19.025 3.587c-4.356 2.556-4.044 7.806-7.096 10.175-2.297 1.783-5.538.88-7.412.113 0 0-1.27 1.603-2.181 3.74-.305.717-1.644-.073-1.409-.68C3.905 9.25 14.037 5.416 14.037 5.416s-7.149-.303-11.927 5.94c-.128-1.426-.34-5.284 3.36-7.65 5.016-3.211 14.572-.715 13.555-.119z"
+              fill="#34a853"
+              class="color000000 svgShape"
+            ></path>
+          </svg>
+          Tienda
+        </h2>
+        <div class="products-grid">
+          <div class="product-card">
+            <img
+              src="../assets/imagenes/plantitas.jpg"
+              alt="NomProduct"
+              class="product-image"
+            />
+            <div class="product-content">
+              <h3 class="product-title">NomProduct</h3>
+              <p class="product-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore.
+              </p>
+              <button class="product-button">Ver más</button>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="../assets/imagenes/plantitas.jpg"
+              alt="NomProduct"
+              class="product-image"
+            />
+            <div class="product-content">
+              <h3 class="product-title">NomProduct</h3>
+              <p class="product-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore.
+              </p>
+              <button class="product-button">Ver más</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+
