@@ -1,0 +1,21 @@
+# Usa una imagen base de Node.js
+FROM node:18
+
+# Crea y usa el directorio de la aplicación
+WORKDIR /app
+
+# Copia el package.json y package-lock.json e instala dependencias
+COPY package*.json ./
+RUN npm install
+
+# Copia el resto del código de la aplicación
+COPY . .
+
+# Construye la aplicación
+RUN npm run build
+
+# Expone el puerto en el que NestJS correrá
+EXPOSE 3000
+
+# Comando para correr la aplicación en desarrollo
+CMD ["npm", "run", "start:dev"]
