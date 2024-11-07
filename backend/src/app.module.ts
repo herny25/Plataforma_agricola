@@ -1,17 +1,28 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { ConfigModule, ConfigService } from '@nestjs/config';
+import { PublicacionModule } from './publicacion/publicacion.module';
+import { ProductoModule } from './producto/producto.module';
+import { NotificacionModule } from './notificacion/notificacion.module';
 import { UsuarioModule } from './usuario/usuario.module';
-import { Usuario } from './usuario/usuario.entity/usuario.entity';
-import { dbConfig } from './dbConfig';
+import { ValoracionModule } from './valoracion/valoracion.module';
 
 @Module({
-  imports: [dbConfig,
-    UsuarioModule
+  imports: [
+    TypeOrmModule.forRoot({
+      type: 'postgres',
+      host: 'localhost',
+      port: 5432,
+      username: 'user',
+      password: '123456',
+      database: 'plataforma_agricola',
+      entities: [__dirname + '/**/*.entity{.ts,.js}'],
+      synchronize: true,
+    }),
+    PublicacionModule,
+    ProductoModule,
+    NotificacionModule,
+    UsuarioModule,
+    ValoracionModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
 })
 export class AppModule {}

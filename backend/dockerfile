@@ -1,21 +1,19 @@
-# Usa una imagen base de Node.js
-FROM node:18
+# El archivo Dockerfile contiene las instrucciones para construir la imagen de Docker de tu aplicación NestJS. Vamos a explicar cada línea del Dockerfile que proporcioné anteriormente:
+FROM node:16-alpine
 
-# Crea y usa el directorio de la aplicación
+#Esta línea indica que la imagen de Docker se basará en la imagen oficial de Node.js versión 16 con la etiqueta "alpine", que es una imagen más pequeña y ligera.
 WORKDIR /app
 
-# Copia el package.json y package-lock.json e instala dependencias
+#Esta línea establece el directorio de trabajo dentro del contenedor de Docker como `/app`.
 COPY package*.json ./
 RUN npm install
 
-# Copia el resto del código de la aplicación
+#Estas líneas copian los archivos `package.json` y `package-lock.json` al directorio de trabajo y luego ejecutan el comando `npm install` para instalar las dependencias de la aplicación.
 COPY . .
 
-# Construye la aplicación
+#Esta línea copia todos los archivos y carpetas del proyecto al directorio de trabajo dentro del contenedor.
 RUN npm run build
 
-# Expone el puerto en el que NestJS correrá
-EXPOSE 3000
-
-# Comando para correr la aplicación en desarrollo
-CMD ["npm", "run", "start:dev"]
+#Esta línea ejecuta el comando `npm run build` para compilar la aplicación NestJS.
+CMD [ "npm", "run", "start:prod" ]
+#Esta línea establece el comando que se ejecutará cuando se inicie el contenedor de Docker. En este caso, se ejecutará `npm run start:prod` para iniciar la aplicación en modo de producción.

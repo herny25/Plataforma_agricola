@@ -1,6 +1,6 @@
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { config } from 'dotenv';
-import { Usuario } from './usuario/usuario.entity/usuario.entity';
+import { Usuario } from '../src/usuario/usuario.entity';
 config();
 
 export const dbConfig = TypeOrmModule.forRoot({
